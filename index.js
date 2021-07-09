@@ -1,7 +1,9 @@
-const game = new Game([new Assassin, new Berzerker, new Fighter, new Monk, new Paladin])
-const turn = new Turn
+players = [new Assassin, new Berzerker, new Fighter, new Monk, new Paladin]
+const game = new Game(players)
 
-while (game.turnLeft != 0) {
-    game.turnLeft -= 1
-    game.new_turn()
+var i = 3
+
+while (i != 0) {
+    game.newTurn(players)
+    i -= 1
 }
